@@ -1,0 +1,62 @@
+**Mukesh otwani tutorial - https://www.youtube.com/watch?v=snDSB9b8v_E
+
+what is pytest?
+pytest is a framework it has couple of classes,methods and decorator which will help to organize your code.
+this framework makes out task is easy.
+
+EX- pytest
+       Framework
+          couple of class
+
+How to run program:
+--------------------
+step 1--> CD Day_1 (press enter)
+              pytest (press enter)
+
+step 2--> if you want to see passed test cases details with failed test case.
+pytest -rA (press enter)
+
+step 3--->
+use below command to run specific test case
+
+Ex: pytest Test_Second.py
+Ex: pytest Test_Second.py -h (help it will show all help options)
+EX: pytest Test_Second.py -rA (to get all the info)
+EX: pytest Test_Second.py -rA -k login (to get specific test case result, it will deselect other test cases)
+EX: pytest Test_Second.py -rA -v (to get detail summery about result)
+EX: pytest Test_Second.py -rA --junitxml="Report1.xml" (when we need to create XML file) right click>>open with>>browser
+
+*When we need to generate HTMLReport:
+-------------------------------------
+1. Go to google type'pytest html report' press enter
+2. click on first link, will redirect to "pytest-html 3.1.1" copy it and paste it into terminal
+3.it will install package
+4. click>>document>>userguide>>self contained report>>copy "--html=report.html"
+5. in terminal type: pytest --html=MyHTMLReport.html (press enter)
+6. in project folder one file will generate "MyHTMLReport.html" open in any browser
+
+* How to generate Allure Report step by step:
+---------------------------------------------
+1. Go to google>> type >>allure report python>>click on >>https://allurereport.org/docs/pytest/
+2. for this we need to add one flag in terminal
+3. first type in terminal>>pip install allure-pytest
+4. tpe this in terminal >>python -m pytest
+
+*Markers step by step process:
+------------------------------
+1. open Google>>search>>"pytest mark">>https://pytest.org/en/7.4.x/example/markers.html
+2. go to terminal>>type>>py -3 -m pip install pytest
+3. type>>py -3 -m pip install pytest-pep8
+4. type>>pytest --markers (without project name)
+5. pytest Test_markers.py -m smoke
+** if you want to run any one of them test cases user below cmd(we can use 'and'  'or' if we have custom markers)
+6. pytest Test_markers.py -m "smoke or regression"
+** if we dont want to see the warning in terminal follow below step
+1. https://pytest.org/en/7.4.x/example/markers.html
+2. pytest.ini (create file in current folder) Ex: pytest.ini (which i have created)
+3. in terminal enter:   pytest Test_markers.py -m "smoke or regression" (will not get warning)
+
+---------------------------------------
+
+
+
